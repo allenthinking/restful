@@ -14,7 +14,7 @@ import com.hantang.helix.restful.model.User;
 import com.hantang.helix.restful.utils.ValidationUtils;
 
 @RestController
-public class UserService {
+public class UserApi {
 
 	/**
 	 * add user
@@ -33,7 +33,7 @@ public class UserService {
 		Map<String, String> validationResult = ValidationUtils.validateUser(user);
 
 		if (null != validationResult) {
-			// 这里会抛出异常 ， 这里只是简单抛出 Runtime 异常， 在项目中，我们会捕捉所有异常，然后把异常封装封装一个“数据返回对象” 。
+			// 这里会抛出异常 ， 这里只是简单抛出 Runtime 异常， 在项目中，我们把异常堆栈信息还会给客户段，而是捕捉所有异常，然后把异常封装封装一个“数据返回对象” 。
 			validationResult.forEach(((key, value) -> {
 				throw new RuntimeException(value);
 			}));
