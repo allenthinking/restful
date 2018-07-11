@@ -26,7 +26,7 @@ public class UserApi {
 	@RequestMapping(path = "/user", method = RequestMethod.POST)
 	public User createUser(@RequestBody User user) {
 
-		// 创建用户，系统回随机生成一个唯一ID
+		//Application generate this Index
 		user.setUserId("21123123");
 
 		// 数据验证 - 具体细节请看 validateUser 方法
