@@ -19,6 +19,7 @@
 	<properties>
 		<!-- Use Jdk 1.8 -->
 		<java.version>1.8</java.version>
+		<!--Use UTF-8 Character-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
